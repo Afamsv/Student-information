@@ -1,0 +1,8 @@
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\bin\Debug\Student Information Display.exe.config
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\bin\Debug\Student Information Display.exe
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\bin\Debug\Student Information Display.pdb
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\obj\Debug\Student Information Display.csproj.AssemblyReference.cache
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\obj\Debug\Student Information Display.csproj.SuggestedBindingRedirects.cache
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\obj\Debug\Student Information Display.csproj.CoreCompileInputs.cache
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\obj\Debug\Student Information Display.exe
+C:\Users\Afams\source\repos\Student Information Display\Student Information Display\obj\Debug\Student Information Display.pdb
