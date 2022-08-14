@@ -1,4 +1,4 @@
-﻿using System;
+﻿   using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,63 +10,129 @@ namespace Student_Information_Display
     {
         static void Main(string[] args)
         {
-            string FN;
             Console.WriteLine("Enter your first name");
-            FN = Console.ReadLine();
-
-            Console.WriteLine();
-
-            string LN;
-            Console.WriteLine("Enter your last name");
-            LN = Console.ReadLine();
+            string Firstname = Console.ReadLine();
+            while (true)
+            {
+                if (string.IsNullOrEmpty(Firstname))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Enter your first name");
+                    Console.ResetColor();
+                }
+                else if (Firstname.Any(char.IsDigit))
+                {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Number is not accepted");
+                    Console.ResetColor();
+                }
+                else if (Firstname.Length > 10)
+                {
+                    Console.BackgroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("The alpabet that make up your firstname should not exceed 10");
+                }
+                else break;
+                Firstname = Console.ReadLine();
+            }
             
-            Console.WriteLine();
+            Console.WriteLine("\nEnter your last name");
+            string Lastname = Console.ReadLine();
+            while (true)
+            {
+                if (string.IsNullOrEmpty(Lastname))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Enter your last name");
+                    Console.ResetColor();
+                }
+                else if (Lastname.Any(char.IsDigit))
+                {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Number is not accepted");
+                    Console.ResetColor();
+                }
+                else break;
+                Lastname = Console.ReadLine();
+            }
 
-            //string Name;
-            //Console.WriteLine("Enter your name");
-            //Name = Console.ReadLine();
+            Console.WriteLine("\nEnter you registration number");
+            string Registrationnumber = (Console.ReadLine());
+            while (true)
+            {
+                if (string.IsNullOrEmpty(Firstname))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Enter your registration number");
+                    Console.ResetColor();
+                }
+                else break;
+                Firstname = Console.ReadLine();
+            }
 
-            //Console.WriteLine("");
-
-            long Reg;
-            Console.WriteLine("Enter reg number");
-            Reg = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("\nEnter department");
+            string Department = Console.ReadLine();
+            while (true)
+            {
+                if (string.IsNullOrEmpty(Department))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You did not enter anything");
+                    Console.ResetColor();
+                }
+                else if (Department.Any(char.IsDigit))
+                {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Number is not accepted");
+                    Console.ResetColor();
+                }
+                else break;
+                Department = Console.ReadLine();
+            }
 
             Console.WriteLine("");
 
-            string Department;
-            Console.WriteLine("Enter department");
-            Department = Console.ReadLine();
+            Console.WriteLine("\nEnter your email");
+            string Email = Console.ReadLine();
 
-            Console.WriteLine("");
+            Console.WriteLine("\nEnter your age");
+            int? Age = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                if (Age == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Enter your real age");
+                    Console.ResetColor();
+                }
+                else break;
+                Age = Convert.ToInt32(Console.ReadLine());
+            }
 
-            string Email;
-            Console.WriteLine("Enter your email");
-            Email = Console.ReadLine();
+            Console.WriteLine("\nEnter your School name.");
+            string Schoolname = Console.ReadLine();
+            while (true)
+            {
+                if (string.IsNullOrEmpty(Schoolname))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You did not enter anything");
+                    Console.ResetColor();
+                }
+                else if (Schoolname.Any(char.IsDigit))
+                {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Number is not accepted");
+                    Console.ResetColor();
+                }
+                else break;
+                Schoolname = Console.ReadLine();
+            }
 
-            Console.WriteLine("");
-
-            int Age;
-            Console.WriteLine("Enter your age");
-            Age = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("");
-
-            string SchoolName;
-            Console.WriteLine("Enter your School name.");
-            SchoolName = Console.ReadLine();
-
-            Console.WriteLine("");
-
-            Console.WriteLine("Your Detials: "); 
+            Console.WriteLine("\nYour Detials: "); 
             
-            //Console.WriteLine("Your name is: {0}, \nReg No: {1}, \nDepartment: {2}, \nEmail: {3}, \nAge: {4}, \nSchool Name: {5}", FN + " " + LN, Reg, Department, Email, Age, SchoolName);
-            Console.WriteLine($"Your name is: {FN} {LN}, \nReg No: {Department}, \nEmail: {Email}, \nAge: {Age}, \nSchool Name: {SchoolName}");
-            //Console.WriteLine("Reg No: {0}", Reg);
-            //Console.WriteLine("Department: {0}", Department);
-            //Console.WriteLine("Email: {0}", Email);
-            //Console.WriteLine("Age: {0}", Age);
-            //Console.WriteLine("School Name: {0}", SchoolName);
+            
+            Console.WriteLine($"Your name is: {Firstname} {Lastname}, \nReg No: {Department}, " +
+                $"\nEmail: {Email}, \nAge: {Age}, \nSchool Name: {Schoolname}");
         }
     }
 }
